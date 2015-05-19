@@ -7,7 +7,7 @@ output: html_document
 
 This document describes the *run_analysis.R* script
 
-*run_analysis.R* is a single script designed to consolidate test data from the [*Human Activity Recognition Using Smartphones*](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones) dataset.  Its goals are to:
+*run_analysis.R* is a single script designed to consolidate test data from the [*Human Activity Recognition Using Smartphones*](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones) dataset.  It will:
 
 1. Merge the training and the test sets to create one data set.
 2. Extract only the measurements on the mean and standard deviation for each measurement. 
