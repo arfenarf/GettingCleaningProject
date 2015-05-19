@@ -17,24 +17,6 @@ were extracted from the original data set to be included here. *
 * Variables with "mean" in their names are averages.
 * Variables with "std" in their names are standard deviations.
 
-## Deriving the Data
-The *run_analysis.R* script performs the following transformations over the original data set:
-
-1. Loads into data tables:  activity_labels.txt, features.txt, test/X_test.txt, test/y_test.txt, 
-test/subject_test.txt, train/X_train.txt, train/y_train.txt, 
-train/subject_train.txt
-2. Renames columns in the data sets to assist indexing
-3. Renames columns in test_x and train_x data frames with the feature_name from features.txt
-4. Appends subject ID and Activity ID columns to test_x and train_x
-5. Merges test_x and train_x data into a single data frame
-6. Builds a vector out of the column indices for all columns whose names contain "Mean", "mean",
-"Std", or "std", and then adds two columns to allow for 'feature_id' and 'subject'
-7. Extracts only those columns with a matching index number in that vector
-8. Performs a left outer join with activities to bring the activity name into the table and then deletes the superfluous activity_id column
-9. Deletes temporary tables 
-10. Generates a new table summarizing column values as averages, summarized by Activity and Subject.
-11. Writes a space-delimited text file called tidy_data.txt
-to the working directory
 
 ## About The Data 
 A full description of the data set and the project are located here:
@@ -65,7 +47,9 @@ These signals were used to estimate variables of the feature vector for each pat
 
 *subject* (Integer), Subject ID
 
-*feature variables* from the original data set, all numeric, normalized between -1 and +1:
+*feature variables* from the original data set, all numeric, normalized between -1 and +1.  
+Each of the values in this table is aggregated from the source data as an average by activity
+and subject:
 
 tBodyAcc-mean()-X
 
